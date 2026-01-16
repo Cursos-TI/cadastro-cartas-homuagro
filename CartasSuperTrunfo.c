@@ -23,6 +23,8 @@ int main()
     // PIB per Capita
     float pib_capita1, pib_capita2;
 
+    double Super_Poder1, Super_Poder2;
+
     // === Cadastro da Carta 1 ===
     printf("--- Cadastro da Carta 1 ---\n");
     printf("Estado (A-H): ");
@@ -77,6 +79,10 @@ int main()
     pib_capita1 = (float)pib1 * 1000000000 / populacao1;
     pib_capita2 = (float)pib2 * 1000000000 / populacao2;
 
+    // Cálculo do super poder
+    Super_Poder1 = populacao1 + area1 + pib1 * 1000000000.0 + pib_capita1 + densidade1 / 1 + turistico1;
+    Super_Poder2 = populacao2 + area2 + pib2 * 1000000000.0 + pib_capita2 + densidade2 / 1 + turistico2;
+
     // === Exibição dos Dados ===
     printf("\n============================\n");
     printf("      CARTAS CADASTRADAS    \n");
@@ -93,6 +99,7 @@ int main()
     printf("Ponto turístico: %d\n", turistico1);
     printf("Densidade Populacional: %.2f\n", densidade1);
     printf("PIB per Capita: %.2f\n", pib_capita1);
+    printf("Super poder é: %.2f\n", Super_Poder1);
 
     // Exibição Carta 2
     printf("\nCarta 2:\n");
@@ -105,6 +112,7 @@ int main()
     printf("Ponto turístico: %d\n", turistico2);
     printf("Densidade Populacional: %.2f\n", densidade2);
     printf("PIB per Capita: %.2f\n", pib_capita2);
+    printf("Super poder é: %.2f\n", Super_Poder2);
 
     return 0;
 }
