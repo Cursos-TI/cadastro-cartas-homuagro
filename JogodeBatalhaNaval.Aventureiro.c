@@ -36,13 +36,15 @@ int main (){
         tabuleiro[9-i][i] = 3;
     }
     // 4. Exibição do tabuleiro 
+    printf("\n--- Jogo de Batalha Naval ---\n");
+    printf("     (Nível Aventureiro) \n     ");
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
             printf("%d ", tabuleiro[i][j]);            
         }
-        printf("\n"); // Pula para a próxima linha
+        printf("     \n     "); // Pula para a próxima linha
     }
     return 0;    
 }
